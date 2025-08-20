@@ -331,7 +331,7 @@ const MathExamApp = () => {
 
     const handleLogin = async () => {
         const selectedUser = users.find(u => u.name === selectedName);
-        if (!selectedUser || selectedUser.id !== inputCode) {
+        if (!selectedUser || selectedUser.experimental_code !== inputCode) {
             setLoginError('Nama dan kode tidak cocok!');
             return;
         }
@@ -562,7 +562,7 @@ const MathExamApp = () => {
     const renderLoginPage = () => (
         <div style={styles.loginPage}>
             <div style={styles.loginForm}>
-                <h1>Login Ujian Matematika</h1>
+                <h1>Login Latihan Matematika</h1>
                 <select
                     style={styles.select}
                     value={selectedName}
